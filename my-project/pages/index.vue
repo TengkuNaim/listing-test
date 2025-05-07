@@ -65,15 +65,9 @@
     <UserCard class="px-4 sm:px-6" :user="profileUser" />
 
     <main class="mx-auto py-4 sm:py-6 px-2 sm:px-6 lg:px-8">
-      <UserList 
-        :users="users" 
-        @user-selected="selectedUser = $event" 
-      />
+      <UserList :users="users" @user-selected="selectedUser = $event" />
 
-      <UserDialog 
-        :user="selectedUser" 
-        @close="selectedUser = null" 
-      />
+      <UserDialog :user="selectedUser" @close="selectedUser = null" />
 
       <div class="mt-6 flex justify-center px-4 sm:px-6">
         <button
